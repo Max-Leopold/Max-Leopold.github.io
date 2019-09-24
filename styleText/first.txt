@@ -1,0 +1,80 @@
+/*
+* Hi
+* Im Max. :waving_hand:
+*
+* I'm a Java Backend Developer and made this wonderful website.
+*
+* Wait what? You don't like it?
+* ...
+* Okay...Why's that?
+*
+* You think everything looks horrible?
+*/
+
+body {
+ background-color: #1a1c24;
+ color: #abb2bf;
+}
+
+/*
+* Better now?
+*
+* No?
+*
+* Okay. Then lets start from scratch again.
+* Let me fire up an editor real quick.
+*
+* Give me a second to fire up an editor real quick.
+*/
+
+body {
+ font-family: 'Fira Mono', monospace;
+ margin= 0px;
+ overflow: hidden;
+}
+
+#editor {
+ transition: left 500ms;
+ background-color: #282c34;
+ box-sizing: border-box;
+ overflow: auto;
+ float: right;
+ flex: 9 1 0px;
+ margin: 5px 5px 5px 5px;
+ padding: 5px 0px 0px 10px;
+}
+
+#fileSystem {
+ background-color: #282c34;
+ flex: 2 1 0px;
+ overflow: auto;
+ margin: 5px 0px 5px 5px;
+ padding: 5px 0px 0px 10px;
+}
+
+#terminalDiv {
+ background-color: #282c34;
+ margin: 0px 5px 5px 5px;
+}
+
+#terminalHeader {
+ padding: 2px 0px 2px 10px;
+ color: #c426b4;
+ margin: 0px 0px 0px 0px;
+}
+
+#terminal {
+ flex: 2 1 0px;
+ overflow: auto;
+ margin: 0px 0px 0px 0px;
+ padding: 2px 0px 5px 10px;
+ height: 20%;
+}
+
+#fileSystemAndEditorDiv {
+ flex: 2 1 0px;
+}
+
+.comment { color: #5c6370; }
+.value { color: #56b6c2; }
+.class { color: #de6d77; }
