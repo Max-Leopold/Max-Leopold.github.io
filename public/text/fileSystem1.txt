@@ -1,0 +1,6 @@
+/*
+* Hi
+* Im Max.
+* I normally don't do frontend stuff so excuse me if I just write this website while we are talking.
+* ...
+*/

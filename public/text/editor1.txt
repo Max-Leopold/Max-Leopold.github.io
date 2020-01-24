@@ -34,12 +34,11 @@ body {
 }
 
 #editor {
- transition: left 500ms;
  background-color: #282c34;
+ flex: 9 1 0px;
  box-sizing: border-box;
  overflow: auto;
  float: right;
- flex: 9 1 0px;
  margin: 5px 5px 5px 5px;
  padding: 5px 0px 0px 10px;
 }
@@ -78,3 +77,10 @@ body {
 .comment { color: #5c6370; }
 .value { color: #56b6c2; }
 .class { color: #de6d77; }
+
+#editorHeader {
+ padding: 2px 0px 2px 10px;
+ color: #c426b4;
+ margin: 0px 0px 0px 0px;
+}
+

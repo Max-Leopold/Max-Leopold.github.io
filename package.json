@@ -1,15 +1,15 @@
 {
   "name": "private_website",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "jquery": "^3.4.1"
-  }
+    "express": "latest",
+    "jqeury": "0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "start": "npx nodemon server.js"
+  },
+  "main": "server.js"
 }
