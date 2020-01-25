@@ -11,10 +11,18 @@
 * You think everything looks horrible?
 */
 
+
+
 body {
  background-color: #1a1c24;
  color: #abb2bf;
 }
+
+$
+<a href="http://www.google.com" target="_blank" rel="noopener noreferrer">
+<img border="0" alt="W3Schools" src="public/images/github_icon.png" width="100" height="100">
+</a>
+$
 
 /*
 * Better now?
@@ -29,7 +37,7 @@ body {
 
 body {
  font-family: 'Fira Mono', monospace;
- margin= 0px;
+ margin: 0px;
  overflow: hidden;
 }
 
