@@ -55,7 +55,7 @@ function writeChar(message, to) {
         newHtml = $(to).html().replace(/(\/[^\/]*\*)$/, '<em class="comment">$1/</em>');
     } else if (startComment === true && (message === '.' || message === '?')) {
         newHtml += message;
-        //time = 800;
+        time = 800;
     } else if (message === ';' && startComment === false) {
         newHtml = $(to).html().replace(/([^:]*)$/, '<em class="value">$1</em>;');
     } else if (message === '{') {
@@ -86,8 +86,8 @@ function writeChar(message, to) {
     }
     else {
         newHtml += message;
-        //time = window.innerWidth <= 578 ? 4 : 1;
-        //time = 1;
+        time = window.innerWidth <= 578 ? 4 : 1;
+        time = 1;
     }
 
 

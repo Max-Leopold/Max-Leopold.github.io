@@ -1,17 +1,12 @@
 /*
-* Hi
-* Im Max. :waving_hand:
+* Hi :waving_hand:
+* Hope you'r good!
 *
-* I'm a Java Backend Developer and made this wonderful website.
+* I don't know how you got here but as you can see I'm a little bit unprepared.
+* So let's improvise this :sweating:
 *
-* Wait what? You don't like it?
-* ...
-* Okay...Why's that?
-*
-* You think everything looks horrible?
+* Let me first make this dark, I can't stand all this bright light.
 */
-
-
 
 body {
  background-color: #1a1c24;
@@ -19,14 +14,9 @@ body {
 }
 
 /*
-* Better now?
+* Much better, don't you think?
 *
-* No?
-*
-* Okay. Then lets start from scratch again.
-* Let me fire up an editor real quick.
-*
-* Give me a second to fire up an editor real quick.
+* Before doing some more stuff here let me quickly fire up my editor.
 */
 
 body {
@@ -76,15 +66,15 @@ body {
  flex: 2 1 0px;
 }
 
+/*
+* Now I have some familiar environment to work in.
+*
+* Just give me a second to add some highlighting and make this a little bit prettier.
+*/
+
 .comment { color: #5c6370; }
 .value { color: #56b6c2; }
 .class { color: #de6d77; }
-
-#editorHeader {
- padding: 2px 0px 2px 10px;
- color: #c426b4;
- margin: 0px 0px 0px 0px;
-}
 
 #about-me, #about-my-work {
  border-color: #4CAF50;
