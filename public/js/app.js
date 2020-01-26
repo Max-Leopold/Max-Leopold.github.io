@@ -12,12 +12,12 @@ var htmlBeforeTag = '';
     const fileSystem = await fileSystemResponse.text();
     const terminalResponse = await fetch('public/text/terminal1.txt');
     const terminal = await terminalResponse.text();
-    const terminalHeaderResponse = await fetch('public/text/terminalHeader.txt');
-    const terminalHeader = await terminalHeaderResponse.text();
+    //const terminalHeaderResponse = await fetch('public/text/terminalHeader.txt');
+    //const terminalHeader = await terminalHeaderResponse.text();
 
     await writeText(htmlEditor, 0, time, '#editor', 'editor');
     await writeText(fileSystem, 0, time, '#fileSystem', 'fileSystem');
-    await writeText(terminalHeader, 0, time, '#terminalHeader', 'terminal');
+    //await writeText(terminalHeader, 0, time, '#terminalHeader', 'terminal');
     await writeText(terminal, 0, time, '#terminal', 'terminal');
 }).call(this);
 
@@ -88,6 +88,12 @@ function writeChar(message, to) {
     $(to).html(newHtml);
     $('#style').append(message);
 
+}
+
+async function about_me() {
+    const terminalHeaderResponse = await fetch('public/text/terminalHeader.txt');
+    const terminalHeader = await terminalHeaderResponse.text();
+    await writeText(terminalHeader, 0, time, '#terminalHeader', 'terminal');
 }
 
 
