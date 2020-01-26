@@ -4,21 +4,28 @@ var startString = false;
 var startHtml = false;
 var htmlTagBuffer = '';
 var htmlBeforeTag = '';
+var alreadyDeployed = false;
 
 (async function start() {
     const htmlEditorResponse = await fetch('public/text/editor1.css');
     const htmlEditor = await htmlEditorResponse.text();
-    const fileSystemResponse = await fetch('public/text/fileSystem1.html');
-    const fileSystem = await fileSystemResponse.text();
+    await writeText(htmlEditor, 0, time, '#editor', 'editor');
+
+    //const fileSystemResponse = await fetch('public/text/fileSystem1.html');
+    //const fileSystem = await fileSystemResponse.text();
+    //await writeText(fileSystem, 0, time, '#fileSystem', 'fileSystem');
+
+    const terminalHeaderResponse = await fetch('public/text/terminalHeader.txt');
+    const terminalHeader = await terminalHeaderResponse.text();
+    await writeText(terminalHeader, 0, time, '#terminalHeader', 'terminal');
+
     const terminalResponse = await fetch('public/text/terminal1.txt');
     const terminal = await terminalResponse.text();
-    //const terminalHeaderResponse = await fetch('public/text/terminalHeader.txt');
-    //const terminalHeader = await terminalHeaderResponse.text();
-
-    await writeText(htmlEditor, 0, time, '#editor', 'editor');
-    await writeText(fileSystem, 0, time, '#fileSystem', 'fileSystem');
-    //await writeText(terminalHeader, 0, time, '#terminalHeader', 'terminal');
     await writeText(terminal, 0, time, '#terminal', 'terminal');
+
+    const htmlEditorButtonsResponse = await fetch('public/text/buttons1.html');
+    const htmlEditorButtons = await htmlEditorButtonsResponse.text();
+    await writeText(htmlEditorButtons, 0, time, '#editor', 'editor');
 }).call(this);
 
 function writeText(message, index, interval, to, scroll) {
@@ -69,9 +76,8 @@ function writeChar(message, to) {
 
         document.getElementById(to.slice(1)).innerHTML = htmlBeforeTag;
         document.getElementById(to.slice(1)).appendChild(tag);
-        console.log(document.getElementById(to.slice(1)).innerHTML);
         newHtml = document.getElementById(to.slice(1)).innerHTML;
-        console.log(document.getElementById(to.slice(1)).innerHTML);
+
         htmlTagBuffer = '';
     } else if (startHtml) {
         htmlTagBuffer += message;
@@ -90,10 +96,33 @@ function writeChar(message, to) {
 
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function deploy() {
+    await writeText(' ./deploy_website\n', 0, time, '#terminal', 'terminal');
+
+    var beforeDeploy = $('#terminal').html();
+    var loading = '';
+
+    for (let i = 0; i <= 15; i++) {
+        loading = '';
+        for (let j = 0; j < i; j++) {
+            loading = loading.concat('█');
+        }
+        loading = loading.concat(' ' + Math.round((i / 15) * 100) + '%');
+        $('#terminal').html(beforeDeploy + loading);
+        await sleep(200);
+    }
+
+    $('#terminal').append('\nWebsite succesfully deployed!\nmax@website ~ %');
+}
+
 async function about_me() {
-    const terminalHeaderResponse = await fetch('public/text/terminalHeader.txt');
-    const terminalHeader = await terminalHeaderResponse.text();
-    await writeText(terminalHeader, 0, time, '#terminalHeader', 'terminal');
+    const editor_aboutMeResponse = await fetch('public/text/editor_aboutMe.html');
+    const editor_aboutMe = await editor_aboutMeResponse.text();
+    await writeText(editor_aboutMe, 0, time, '#editor', 'editor');
 }
 
 

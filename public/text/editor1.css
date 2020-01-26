@@ -96,8 +96,9 @@ body {
  background-color: #282c34;
  color: #abb2bf;
  padding: 14px 28px;
- font-size: 16px;
+ font-size: 1em;
  cursor: pointer;
+ margin: 10px 10px 10px 0px;
 }
 
 .btn:hover {
@@ -108,14 +109,3 @@ body {
 .btn:focus {
  outline: none;
 }
-
-/*
-* Ok, so we got our Editor standing.
-* Let's display something on this site that you find interesting.
-*
-* What do you want to know?
-*/
-
-$
-<button type="button" class="btn about-me" onclick="about_me()">Tell me something about you!</button>
-$

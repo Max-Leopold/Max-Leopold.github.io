@@ -8,5 +8,5 @@ const server = app.listen(7000, () => {
 app.use("/public", express.static(__dirname + "/public"));
 
 app.get('/', function(req, res){
-    res.sendFile(__dirname + '/views/index.html');
+    res.sendFile(__dirname + '/index.html');
 });
